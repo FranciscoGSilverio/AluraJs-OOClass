@@ -1,4 +1,13 @@
 export class Clients {
   name;
-  id;
+  _id;
+
+  get id() {
+    return this._id;
+  }
+
+  constructor(name, id) {
+    this.name = name;
+    this._id = id;
+  }
 }
