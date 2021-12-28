@@ -1,0 +1,20 @@
+{
+  "name": "alurajs-ooclass",
+  "version": "1.0.0",
+  "description": "Bank project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranciscoGSilverio/AluraJs-OOClass.git"
+  },
+  "author": "Francisco Silvério",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/FranciscoGSilverio/AluraJs-OOClass/issues"
+  },
+  "homepage": "https://github.com/FranciscoGSilverio/AluraJs-OOClass#readme"
+}
