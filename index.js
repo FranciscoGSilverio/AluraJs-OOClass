@@ -1,18 +1,20 @@
 import { Clients } from "./Clients.js";
-import { Account } from "./Accounts/Account.js";
-import { SavingsAccount } from "./SavingsAccount.js";
+import { Manager } from "./Employees/Manager.js";
+import { Director } from "./Employees/Director.js";
+import { AutenticationSystem } from "./AutenticationSystem.js";
 
-const Francisco = new Clients("Francisco", 11122233345);
-const Mauricio = new Clients("Mauricio", 22233344456);
+const director = new Director("Fernando", 1000, 123123123);
+const manager = new Manager("Ricardo", 500, 234345678);
 
-const FranciscoAccount = new SavingsAccount(200, Francisco, 20);
-const MauricioAccount = new Account(Mauricio, 10);
+director.registerPassword(123456);
+manager.registerPassword(123);
+
+const Client = new Clients("Amanda", 123456789, 234);
 
 
-//****Methods demonstration****
-/*MauricioAccount.deposit(500);
-MauricioAccount.withdraw(100); 
+const managerLoged = AutenticationSystem.login(manager, 123);
+const directorLoged = AutenticationSystem.login(director, 123456);
 
-MauricioAccount.transfer(300, FranciscoAccount);
+const clientLoged = AutenticationSystem.login(Client, 234);
 
-console.log(FranciscoAccount, MauricioAccount);*/
+console.log(managerLoged, directorLoged, clientLoged);

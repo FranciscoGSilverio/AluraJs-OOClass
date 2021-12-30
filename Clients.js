@@ -3,8 +3,12 @@ export class Clients {
     return this._id;
   }
 
-  constructor(name, id) {
-    this.name = name;
+  constructor(name, id, password) {
+    this._name = name;
     this._id = id;
+    this._password = password;
+  }
+  authenticate(){
+    return true;
   }
 }
