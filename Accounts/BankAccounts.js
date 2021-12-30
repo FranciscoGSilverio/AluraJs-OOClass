@@ -1,3 +1,4 @@
+//Abstract class
 export class BankAccounts {
   set client(newValue) {
     if (newValue instanceof Clients) this._client = newValue;
@@ -12,14 +13,18 @@ export class BankAccounts {
   }
 
   constructor(inicialCash, client, agency) {
+    if (this.constructor == BankAccounts)
+      throw new Error(
+        "You shouldn't instanciante an object using an abstract class"
+      );
     this._cash = inicialCash;
     this._client = client;
     this._agency = agency;
   }
 
+  //abstract method
   withdraw(value) {
-    let fee = 1;
-    return this._withdraw(value, fee);
+    throw new Error("The withdraw method of BankAccounts is an abstract method");
   }
 
   _withdraw(value, fee) {
